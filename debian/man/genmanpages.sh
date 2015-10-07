@@ -1,7 +1,7 @@
 #!/bin/bash
 
 
-txt2man -d "${CHANGELOG_DATE}" -t ICEBOX-DIFF            -s 1 icebox-diff.txt          > icebox-diff.1
+txt2man -d "${CHANGELOG_DATE}" -t ICEBOX_DIFF            -s 1 icebox_diff.txt          > icebox_diff.1
 txt2man -d "${CHANGELOG_DATE}" -t ICEPROG                -s 1 iceprog.txt             > iceprog.1
 txt2man -d "${CHANGELOG_DATE}" -t ICEMULTI               -s 1 icemulti.txt            > icemulti.1
 txt2man -d "${CHANGELOG_DATE}" -t ICEPACK                -s 1 icepack.txt             > icepack.1
