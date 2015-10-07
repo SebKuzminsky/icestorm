@@ -1,3 +1,5 @@
+Author: Ruben Undheim <ruben.undheim@gmail.com>
+Description: This patch makes sure that the files are installed in the correct location
 Index: icestorm-0~20151006git103e6fd/icebox/Makefile
 ===================================================================
 --- icestorm-0~20151006git103e6fd.orig/icebox/Makefile	2015-10-07 23:20:00.195332107 +0400

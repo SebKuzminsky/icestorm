@@ -1,5 +1,5 @@
 icestorm (0~20151006git103e6fd-1) unstable; urgency=low
 
-  * Initial release (Closes: #nnnn)  <nnnn is the bug number of your ITP>
+  * Initial release (Closes: #801229)
 
- -- Ruben Undheim <ruben.undheim@gmail.com>  Wed, 07 Oct 2015 19:26:37 +0400
+ -- Ruben Undheim <ruben.undheim@gmail.com>  Wed, 07 Oct 2015 19:26:37 +0200
