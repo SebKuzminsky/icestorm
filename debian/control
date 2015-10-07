@@ -11,10 +11,17 @@ Vcs-Browser: https://anonscm.debian.org/cgit/debian-science/packages/icestorm.gi
 Vcs-Git: git://anonscm.debian.org/debian-science/packages/icestorm.git
 Homepage: http://www.clifford.at/icestorm/
 
+Package: icestorm-db
+Architecture: all
+Depends: ${misc:Depends}
+Description: <insert up to 60 chars description>
+ <insert long description, indented with spaces>
+
 Package: icestorm
 Architecture: any
 Depends: ${shlibs:Depends},
          ${misc:Depends},
+         icestorm-db,
          python3
 Description: <insert up to 60 chars description>
  <insert long description, indented with spaces>
