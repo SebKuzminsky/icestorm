@@ -1,8 +1,8 @@
 Index: icestorm-0~20151006git103e6fd/icebox/Makefile
 ===================================================================
---- icestorm-0~20151006git103e6fd.orig/icebox/Makefile	2015-10-07 19:40:39.992568392 +0400
-+++ icestorm-0~20151006git103e6fd/icebox/Makefile	2015-10-07 19:40:42.000000000 +0400
-@@ -15,33 +15,33 @@
+--- icestorm-0~20151006git103e6fd.orig/icebox/Makefile	2015-10-07 23:20:00.195332107 +0400
++++ icestorm-0~20151006git103e6fd/icebox/Makefile	2015-10-07 23:22:59.120160675 +0400
+@@ -15,33 +15,34 @@
  	rm -f icebox.pyc iceboxdb.pyc
  
  install: all
@@ -21,17 +21,18 @@ Index: icestorm-0~20151006git103e6fd/icebox/Makefile
 -	cp icebox_vlog.py    $(DESTDIR)/bin/icebox_vlog
 +	mkdir -p $(DESTDIR)/usr/share/icebox
 +	mkdir -p $(DESTDIR)/usr/bin
++	mkdir -p $(DESTDIR)/usr/share/icestorm/python
 +	cp chipdb-1k.txt     $(DESTDIR)/usr/share/icebox/
 +	cp chipdb-8k.txt     $(DESTDIR)/usr/share/icebox/
-+	cp icebox.py         $(DESTDIR)/usr/bin/icebox.py
-+	cp iceboxdb.py       $(DESTDIR)/usr/bin/iceboxdb.py
-+	cp icebox_chipdb.py  $(DESTDIR)/usr/bin/icebox_chipdb
-+	cp icebox_diff.py    $(DESTDIR)/usr/bin/icebox_diff
-+	cp icebox_explain.py $(DESTDIR)/usr/bin/icebox_explain
-+	cp icebox_colbuf.py  $(DESTDIR)/usr/bin/icebox_colbuf
-+	cp icebox_html.py    $(DESTDIR)/usr/bin/icebox_html
-+	cp icebox_maps.py    $(DESTDIR)/usr/bin/icebox_maps
-+	cp icebox_vlog.py    $(DESTDIR)/usr/bin/icebox_vlog
++	cp icebox.py         $(DESTDIR)/usr/share/icestorm/python/icebox.py
++	cp iceboxdb.py       $(DESTDIR)/usr/share/icestorm/python/iceboxdb.py
++	cp icebox_chipdb.py  $(DESTDIR)/usr/share/icestorm/python/icebox_chipdb
++	cp icebox_diff.py    $(DESTDIR)/usr/share/icestorm/python/icebox_diff
++	cp icebox_explain.py $(DESTDIR)/usr/share/icestorm/python/icebox_explain
++	cp icebox_colbuf.py  $(DESTDIR)/usr/share/icestorm/python/icebox_colbuf
++	cp icebox_html.py    $(DESTDIR)/usr/share/icestorm/python/icebox_html
++	cp icebox_maps.py    $(DESTDIR)/usr/share/icestorm/python/icebox_maps
++	cp icebox_vlog.py    $(DESTDIR)/usr/share/icestorm/python/icebox_vlog
  
  uninstall:
 -	rm -f $(DESTDIR)/bin/icebox.py
@@ -63,8 +64,8 @@ Index: icestorm-0~20151006git103e6fd/icebox/Makefile
  
 Index: icestorm-0~20151006git103e6fd/icemulti/Makefile
 ===================================================================
---- icestorm-0~20151006git103e6fd.orig/icemulti/Makefile	2015-10-07 19:23:26.972543629 +0400
-+++ icestorm-0~20151006git103e6fd/icemulti/Makefile	2015-10-07 19:43:06.529708674 +0400
+--- icestorm-0~20151006git103e6fd.orig/icemulti/Makefile	2015-10-07 23:20:00.195332107 +0400
++++ icestorm-0~20151006git103e6fd/icemulti/Makefile	2015-10-07 23:20:02.000000000 +0400
 @@ -10,10 +10,10 @@
  icemulti: icemulti.o
  
@@ -80,8 +81,8 @@ Index: icestorm-0~20151006git103e6fd/icemulti/Makefile
  	rm -f icemulti
 Index: icestorm-0~20151006git103e6fd/icepack/Makefile
 ===================================================================
---- icestorm-0~20151006git103e6fd.orig/icepack/Makefile	2015-10-07 19:23:26.972543629 +0400
-+++ icestorm-0~20151006git103e6fd/icepack/Makefile	2015-10-07 19:43:16.913427360 +0400
+--- icestorm-0~20151006git103e6fd.orig/icepack/Makefile	2015-10-07 23:20:00.195332107 +0400
++++ icestorm-0~20151006git103e6fd/icepack/Makefile	2015-10-07 23:20:02.000000000 +0400
 @@ -13,12 +13,12 @@
  	ln -sf icepack iceunpack
  
@@ -101,8 +102,8 @@ Index: icestorm-0~20151006git103e6fd/icepack/Makefile
  	rm -f icepack
 Index: icestorm-0~20151006git103e6fd/iceprog/Makefile
 ===================================================================
---- icestorm-0~20151006git103e6fd.orig/iceprog/Makefile	2015-10-07 19:23:26.976543581 +0400
-+++ icestorm-0~20151006git103e6fd/iceprog/Makefile	2015-10-07 19:43:27.481134430 +0400
+--- icestorm-0~20151006git103e6fd.orig/iceprog/Makefile	2015-10-07 23:20:00.195332107 +0400
++++ icestorm-0~20151006git103e6fd/iceprog/Makefile	2015-10-07 23:20:02.000000000 +0400
 @@ -8,10 +8,10 @@
  iceprog: iceprog.o
  
