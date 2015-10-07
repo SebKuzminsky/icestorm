@@ -1,0 +1,18 @@
+NAME
+  icebox-diff - blabla
+
+SYNOPSIS
+  icebox-diff [options]
+
+
+OPTIONS
+  #-h    help
+
+ 
+
+
+AUTHOR
+  This manual page was written by Ruben Undheim <ruben.undheim@gmail.com> for the Debian project (and may be used by others).
+
+
+
