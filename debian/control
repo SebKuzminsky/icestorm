@@ -21,7 +21,7 @@ Package: icestorm
 Architecture: any
 Depends: ${shlibs:Depends},
          ${misc:Depends},
-         icestorm-chipdb,
          python3
+Suggests: icestorm-chipdb
 Description: <insert up to 60 chars description>
  <insert long description, indented with spaces>
