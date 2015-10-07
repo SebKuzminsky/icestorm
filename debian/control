@@ -1,0 +1,15 @@
+Source: icestorm
+Section: unknown
+Priority: optional
+Maintainer: Ruben Undheim <ruben.undheim@gmail.com>
+Build-Depends: debhelper (>= 9), libftdi-dev
+Standards-Version: 3.9.6
+Homepage: <insert the upstream URL, if relevant>
+#Vcs-Git: git://anonscm.debian.org/collab-maint/icestorm.git
+#Vcs-Browser: https://anonscm.debian.org/gitweb/?p=collab-maint/icestorm.git;a=summary
+
+Package: icestorm
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: <insert up to 60 chars description>
+ <insert long description, indented with spaces>
