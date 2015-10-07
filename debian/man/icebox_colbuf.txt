@@ -1,12 +1,13 @@
 NAME
-  icebox-diff - blabla
+  icebox_colbuf - 
 
 SYNOPSIS
-  icebox-diff [options]
+  icebox-colbuf [options] [input.txt [output.txt]]
 
 
 OPTIONS
-  #-h    help
+  -c    check colbuf bits
+  -f    fix colbuf bits
 
  
 

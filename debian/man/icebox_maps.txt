@@ -1,12 +1,17 @@
 NAME
-  icebox-diff - blabla
+  icebox_maps - 
 
 SYNOPSIS
-  icebox-diff [options]
+  icebox_maps -m bitmaps
+  icebox_maps -m io_tile_nets_l
+  icebox_maps -m io_tile_nets_r
+  icebox_maps -m io_tile_nets_t
+  icebox_maps -m io_tile_nets_b
+  icebox_maps -m logic_tile_nets
+  icebox_maps -m ramb_tile_nets
+  icebox_maps -m ramt_tile_nets
 
 
-OPTIONS
-  #-h    help
 
  
 

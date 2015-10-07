@@ -1,12 +1,12 @@
 NAME
-  icebox-diff - blabla
+  icebox_chipdb - create chipdb for specified device
 
 SYNOPSIS
-  icebox-diff [options]
+  icebox_chipdb [options] [bitmap.txt]
 
 
 OPTIONS
-  #-h    help
+  -8    create for 8k device
 
  
 

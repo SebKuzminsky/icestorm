@@ -1,12 +1,10 @@
 NAME
-  icebox-diff - blabla
+  icebox_diff -
 
 SYNOPSIS
-  icebox-diff [options]
+  icebox_diff [options]
 
 
-OPTIONS
-  #-h    help
 
  
 

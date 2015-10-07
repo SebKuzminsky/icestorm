@@ -1,12 +1,15 @@
 NAME
-  icebox-diff - blabla
+  icebox_html - create html view of bitstream
 
 SYNOPSIS
-  icebox-diff [options]
+  icebox_html [options]
 
 
 OPTIONS
-  #-h    help
+  -x tile_x_coordinate
+  -y tile_y_coordinate
+  -d outdir
+  -8
 
  
 
