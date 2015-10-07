@@ -1,5 +1,5 @@
 NAME
-  icemulti - 
+  icemulti - a tool for packing multiple bitstream files into one iCE40 multiboot image file
 
 SYNOPSIS
   icemulti [options] input-files
