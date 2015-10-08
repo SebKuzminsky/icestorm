@@ -5,7 +5,8 @@ Section: electronics
 Priority: optional
 Build-Depends: debhelper (>= 9),
                libftdi-dev,
-               python3
+               python3,
+               txt2man
 Standards-Version: 3.9.6
 Vcs-Browser: https://anonscm.debian.org/cgit/debian-science/packages/icestorm.git
 Vcs-Git: git://anonscm.debian.org/debian-science/packages/icestorm.git
@@ -28,6 +29,8 @@ Architecture: any
 Depends: ${shlibs:Depends},
          ${misc:Depends},
          python3
+Recommends: yosys,
+            arachne-pnr
 Suggests: icestorm-chipdb
 Description: Tools to handle the bitstream format of Lattice iCE40 FPGAs
  Project IceStorm aims at documenting the bitstream format of Lattice iCE40

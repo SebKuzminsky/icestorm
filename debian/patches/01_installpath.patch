@@ -21,11 +21,11 @@ Index: icestorm-0~20151006git103e6fd/icebox/Makefile
 -	cp icebox_html.py    $(DESTDIR)/bin/icebox_html
 -	cp icebox_maps.py    $(DESTDIR)/bin/icebox_maps
 -	cp icebox_vlog.py    $(DESTDIR)/bin/icebox_vlog
-+	mkdir -p $(DESTDIR)/usr/share/icebox
++	mkdir -p $(DESTDIR)/usr/share/icestorm/chipdb
 +	mkdir -p $(DESTDIR)/usr/bin
 +	mkdir -p $(DESTDIR)/usr/share/icestorm/python
-+	cp chipdb-1k.txt     $(DESTDIR)/usr/share/icebox/
-+	cp chipdb-8k.txt     $(DESTDIR)/usr/share/icebox/
++	cp chipdb-1k.txt     $(DESTDIR)/usr/share/icestorm/chipdb/
++	cp chipdb-8k.txt     $(DESTDIR)/usr/share/icestorm/chipdb/
 +	cp icebox.py         $(DESTDIR)/usr/share/icestorm/python/icebox.py
 +	cp iceboxdb.py       $(DESTDIR)/usr/share/icestorm/python/iceboxdb.py
 +	cp icebox_chipdb.py  $(DESTDIR)/usr/share/icestorm/python/icebox_chipdb
@@ -58,9 +58,9 @@ Index: icestorm-0~20151006git103e6fd/icebox/Makefile
 +	rm -f $(DESTDIR)/usr/bin/icebox_html
 +	rm -f $(DESTDIR)/usr/bin/icebox_maps
 +	rm -f $(DESTDIR)/usr/bin/icebox_vlog
-+	rm -f $(DESTDIR)/usr/share/icebox/chipdb-1k.txt
-+	rm -f $(DESTDIR)/usr/share/icebox/chipdb-8k.txt
-+	-rmdir $(DESTDIR)/usr/share/icebox
++	rm -f $(DESTDIR)/usr/share/icestorm/chipdb/chipdb-1k.txt
++	rm -f $(DESTDIR)/usr/share/icestorm/chipdb/chipdb-8k.txt
++	-rmdir $(DESTDIR)/usr/share/icestorm/chipdb
  
  .PHONY: all clean install uninstall
  
