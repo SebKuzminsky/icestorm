@@ -3,7 +3,8 @@ Upstream-Name: icestorm
 Source: https://github.com/cliffordwolf/icestorm 
 
 Files: *
-Copyright: 2015 Clifford Wolf
+Copyright: 2015 Clifford Wolf <clifford@clifford.at>
+           2015 Marcus Comstedt <marcus@mc.pp.se>
 License: ISC
 
 Files: debian/*
