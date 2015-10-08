@@ -1,0 +1,68 @@
+Description: This patch fixes a few spelling mistakes in error output messages
+Author: Ruben Undheim <ruben.undheim@gmail.com>
+
+Index: icestorm-0~20151006git103e6fd/icepack/icepack.cc
+===================================================================
+--- icestorm-0~20151006git103e6fd.orig/icepack/icepack.cc	2015-10-07 17:23:26.976543581 +0200
++++ icestorm-0~20151006git103e6fd/icepack/icepack.cc	2015-10-08 08:03:46.501963533 +0200
+@@ -328,7 +328,7 @@
+ 				break;
+ 
+ 			default:
+-				error("Unkown command: 0x%02x 0x%02x\n", command, payload);
++				error("Unknown command: 0x%02x 0x%02x\n", command, payload);
+ 			}
+ 			break;
+ 
+@@ -381,7 +381,7 @@
+ 			break;
+ 
+ 		default:
+-			error("Unkown command: 0x%02x 0x%02x\n", command, payload);
++			error("Unknown command: 0x%02x 0x%02x\n", command, payload);
+ 		}
+ 	}
+ 
+@@ -854,21 +854,21 @@
+ {
+ 	if (this->device == "1k") return 12;
+ 	if (this->device == "8k") return 32;
+-	panic("Unkown chip type '%s'.\n", this->device.c_str());
++	panic("Unknown chip type '%s'.\n", this->device.c_str());
+ }
+ 
+ int FpgaConfig::chip_height() const
+ {
+ 	if (this->device == "1k") return 16;
+ 	if (this->device == "8k") return 32;
+-	panic("Unkown chip type '%s'.\n", this->device.c_str());
++	panic("Unknown chip type '%s'.\n", this->device.c_str());
+ }
+ 
+ vector<int> FpgaConfig::chip_cols() const
+ {
+ 	if (this->device == "1k") return vector<int>({18, 54, 54, 42, 54, 54, 54});
+ 	if (this->device == "8k") return vector<int>({18, 54, 54, 54, 54, 54, 54, 54, 42, 54, 54, 54, 54, 54, 54, 54, 54});
+-	panic("Unkown chip type '%s'.\n", this->device.c_str());
++	panic("Unknown chip type '%s'.\n", this->device.c_str());
+ }
+ 
+ string FpgaConfig::tile_type(int x, int y) const
+@@ -886,7 +886,7 @@
+ 		return "logic";
+ 	}
+ 
+-	panic("Unkown chip type '%s'.\n", this->device.c_str());
++	panic("Unknown chip type '%s'.\n", this->device.c_str());
+ }
+ 
+ int FpgaConfig::tile_width(const string &type) const
+@@ -896,7 +896,7 @@
+ 	if (type == "ramb")   return 42;
+ 	if (type == "ramt")   return 42;
+ 	if (type == "io")     return 18;
+-	panic("Unkown tile type '%s'.\n", type.c_str());
++	panic("Unknown tile type '%s'.\n", type.c_str());
+ }
+ 
+ void FpgaConfig::cram_clear()

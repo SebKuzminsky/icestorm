@@ -1,5 +1,5 @@
 NAME
-  icebox_diff -
+  icebox_diff - compare two bitstreams
 
 SYNOPSIS
   icebox_diff [options]

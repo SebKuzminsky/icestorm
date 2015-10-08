@@ -1,0 +1,36 @@
+Description: This makes sure that the CXXFLAGS given by the
+ Debian build system are not overwritten, but prepended.
+Author: Ruben Undheim <ruben.undheim@gmail.com>
+
+--- icestorm-0~20151006git103e6fd.orig/icemulti/Makefile
++++ icestorm-0~20151006git103e6fd/icemulti/Makefile
+@@ -1,7 +1,7 @@
+ # CXX = clang
+ CXX ?= clang
+ LDLIBS = -lm -lstdc++
+-CXXFLAGS = -MD -O0 -ggdb -Wall -std=c++11
++CXXFLAGS += -MD -O0 -ggdb -Wall -std=c++11
+ CC = $(CXX)
+ DESTDIR = /usr/local
+ 
+--- icestorm-0~20151006git103e6fd.orig/icepack/Makefile
++++ icestorm-0~20151006git103e6fd/icepack/Makefile
+@@ -1,7 +1,7 @@
+ # CXX = clang
+ CXX ?= clang
+ LDLIBS = -lm -lstdc++
+-CXXFLAGS = -MD -O0 -ggdb -Wall -std=c++11 -I/usr/local/include
++CXXFLAGS += -MD -O0 -ggdb -Wall -std=c++11 -I/usr/local/include
+ CC = $(CXX)
+ DESTDIR = /usr/local
+ 
+--- icestorm-0~20151006git103e6fd.orig/iceprog/Makefile
++++ icestorm-0~20151006git103e6fd/iceprog/Makefile
+@@ -1,6 +1,6 @@
+ # CC = clang
+ LDLIBS = -L/usr/local/lib -lftdi -lm
+-CFLAGS = -MD -O0 -ggdb -Wall -std=c99 -I/usr/local/include
++CFLAGS += -MD -O0 -ggdb -Wall -std=c99 -I/usr/local/include
+ DESTDIR = /usr/local
+ 
+ all: iceprog

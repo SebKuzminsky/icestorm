@@ -1,5 +1,5 @@
 NAME
-  icebox_maps - 
+  icebox_maps - a tool in the icestorm project
 
 SYNOPSIS
   icebox_maps -m bitmaps

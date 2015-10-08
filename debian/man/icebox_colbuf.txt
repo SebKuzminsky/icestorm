@@ -1,5 +1,5 @@
 NAME
-  icebox_colbuf - 
+  icebox_colbuf - manage colbuf bits
 
 SYNOPSIS
   icebox-colbuf [options] [input.txt [output.txt]]
