@@ -13,6 +13,7 @@ CHANGELOG_DATE ?= $(shell date -d "`dpkg-parsechangelog --show-field Date`" +"%d
 override_dh_auto_clean:
 	dh_auto_clean
 	$(RM) debian/man/*.1
+	$(RM) -r icebox/__pycache__
 
 override_dh_installman:
 	cd debian/man ; CHANGELOG_DATE="$(CHANGELOG_DATE)" ./genmanpages.sh
