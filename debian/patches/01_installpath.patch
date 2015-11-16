@@ -21,20 +21,20 @@ Index: icestorm-0~20151006git103e6fd/icebox/Makefile
 -	cp icebox_html.py    $(DESTDIR)/bin/icebox_html
 -	cp icebox_maps.py    $(DESTDIR)/bin/icebox_maps
 -	cp icebox_vlog.py    $(DESTDIR)/bin/icebox_vlog
-+	mkdir -p $(DESTDIR)/usr/share/icestorm/chipdb
++	mkdir -p $(DESTDIR)/usr/share/fpga-icestorm/chipdb
 +	mkdir -p $(DESTDIR)/usr/bin
-+	mkdir -p $(DESTDIR)/usr/share/icestorm/python
-+	cp chipdb-1k.txt     $(DESTDIR)/usr/share/icestorm/chipdb/
-+	cp chipdb-8k.txt     $(DESTDIR)/usr/share/icestorm/chipdb/
-+	cp icebox.py         $(DESTDIR)/usr/share/icestorm/python/icebox.py
-+	cp iceboxdb.py       $(DESTDIR)/usr/share/icestorm/python/iceboxdb.py
-+	cp icebox_chipdb.py  $(DESTDIR)/usr/share/icestorm/python/icebox_chipdb
-+	cp icebox_diff.py    $(DESTDIR)/usr/share/icestorm/python/icebox_diff
-+	cp icebox_explain.py $(DESTDIR)/usr/share/icestorm/python/icebox_explain
-+	cp icebox_colbuf.py  $(DESTDIR)/usr/share/icestorm/python/icebox_colbuf
-+	cp icebox_html.py    $(DESTDIR)/usr/share/icestorm/python/icebox_html
-+	cp icebox_maps.py    $(DESTDIR)/usr/share/icestorm/python/icebox_maps
-+	cp icebox_vlog.py    $(DESTDIR)/usr/share/icestorm/python/icebox_vlog
++	mkdir -p $(DESTDIR)/usr/share/fpga-icestorm/python
++	cp chipdb-1k.txt     $(DESTDIR)/usr/share/fpga-icestorm/chipdb/
++	cp chipdb-8k.txt     $(DESTDIR)/usr/share/fpga-icestorm/chipdb/
++	cp icebox.py         $(DESTDIR)/usr/share/fpga-icestorm/python/icebox.py
++	cp iceboxdb.py       $(DESTDIR)/usr/share/fpga-icestorm/python/iceboxdb.py
++	cp icebox_chipdb.py  $(DESTDIR)/usr/share/fpga-icestorm/python/icebox_chipdb
++	cp icebox_diff.py    $(DESTDIR)/usr/share/fpga-icestorm/python/icebox_diff
++	cp icebox_explain.py $(DESTDIR)/usr/share/fpga-icestorm/python/icebox_explain
++	cp icebox_colbuf.py  $(DESTDIR)/usr/share/fpga-icestorm/python/icebox_colbuf
++	cp icebox_html.py    $(DESTDIR)/usr/share/fpga-icestorm/python/icebox_html
++	cp icebox_maps.py    $(DESTDIR)/usr/share/fpga-icestorm/python/icebox_maps
++	cp icebox_vlog.py    $(DESTDIR)/usr/share/fpga-icestorm/python/icebox_vlog
  
  uninstall:
 -	rm -f $(DESTDIR)/bin/icebox.py

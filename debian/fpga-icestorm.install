@@ -1,5 +1,5 @@
 usr/bin/*
-usr/share/icestorm/python/*
+usr/share/fpga-icestorm/python/*
 docs/*.svg usr/share/doc/fpga-icestorm/html
 docs/*.html usr/share/doc/fpga-icestorm/html
 docs/*.png usr/share/doc/fpga-icestorm/html
