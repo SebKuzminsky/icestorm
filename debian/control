@@ -29,9 +29,8 @@ Architecture: any
 Depends: ${shlibs:Depends},
          ${misc:Depends},
          python3
-Recommends: yosys,
-            arachne-pnr
-Suggests: fpga-icestorm-chipdb
+Recommends: yosys
+Suggests: arachne-pnr, fpga-icestorm-chipdb
 Description: Tools to handle the bitstream format of Lattice iCE40 FPGAs
  Project IceStorm aims at documenting the bitstream format of Lattice iCE40
  FPGAs and providing simple tools for analyzing and creating bitstream files. At
