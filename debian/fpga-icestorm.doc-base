@@ -1,4 +1,4 @@
-Document: icestorm
+Document: fpga-icestorm
 Title: Documentation for the Icestorm project
 Abstract: Tools to handle the bitstream format of Lattice iCE40 FPGAs
  Project IceStorm aims at documenting the bitstream format of Lattice iCE40
@@ -10,5 +10,5 @@ Abstract: Tools to handle the bitstream format of Lattice iCE40 FPGAs
 Section: Science/Electronics
 
 Format: HTML
-Index: /usr/share/doc/icestorm/html/index.html
-Files: /usr/share/doc/icestorm/html/*.html
+Index: /usr/share/doc/fpga-icestorm/html/index.html
+Files: /usr/share/doc/fpga-icestorm/html/*.html

@@ -1,6 +1,0 @@
-usr/bin/*
-usr/share/icestorm/python/*
-docs/*.svg usr/share/doc/icestorm/html
-docs/*.html usr/share/doc/icestorm/html
-docs/*.png usr/share/doc/icestorm/html
-debian/40-icestorm.rules lib/udev/rules.d
