@@ -1,3 +1,11 @@
+fpga-icestorm (0~20151006git103e6fd-2) unstable; urgency=medium
+
+  * Added udev rules so that members of the plugdev group can program
+    the FPGA.
+  * debian/control: Updated the Vcs-Git path so that it uses a secure protocol.
+
+ -- Ruben Undheim <ruben.undheim@gmail.com>  Sat, 06 Feb 2016 12:34:47 +0100
+
 fpga-icestorm (0~20151006git103e6fd-1) unstable; urgency=low
 
   * Initial release (Closes: #801229)
