@@ -1,3 +1,9 @@
+fpga-icestorm (0~20160218gitf2b25497-1~0) UNRELEASED; urgency=medium
+
+  * New upstream version.
+
+ -- Sebastian Kuzminsky <seb@highlab.com>  Tue, 23 Feb 2016 19:21:14 -0700
+
 fpga-icestorm (0~20151006git103e6fd-3) unstable; urgency=medium
 
   * Set changelog date to UTC with LC_ALL=C to make man pages reproducible.
