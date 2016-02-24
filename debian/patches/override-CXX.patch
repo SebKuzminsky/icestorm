@@ -1,0 +1,10 @@
+--- a/config.mk
++++ b/config.mk
+@@ -1,5 +1,5 @@
+-CXX = clang
+-CC = $(CXX)
++CXX ?= clang
++CC ?= $(CXX)
+ DESTDIR ?=
+ PREFIX ?= /usr/local
+ 
