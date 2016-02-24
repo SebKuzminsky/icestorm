@@ -15,6 +15,9 @@ override_dh_auto_clean:
 	$(RM) debian/man/*.1
 	$(RM) -r icebox/__pycache__
 
+override_dh_auto_install:
+	PREFIX=/usr dh_auto_install
+
 override_dh_installman:
 	cd debian/man ; CHANGELOG_DATE="$(CHANGELOG_DATE)" ./genmanpages.sh
 	dh_installman
