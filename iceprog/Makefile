@@ -1,20 +1,26 @@
-# CC = clang
+include ../config.mk
 LDLIBS = -L/usr/local/lib -lftdi -lm
 CFLAGS = -MD -O0 -ggdb -Wall -std=c99 -I/usr/local/include
-DESTDIR = /usr/local
 
-all: iceprog
+ifeq ($(MXE),1)
+LDLIBS += -lusb
+endif
 
-iceprog: iceprog.o
+all: iceprog$(EXE)
+
+iceprog$(EXE): iceprog.o
+	$(CC) -o $@ $(LDFLAGS) $^ $(LDLIBS)
 
 install: all
-	cp iceprog $(DESTDIR)/bin/iceprog
+	mkdir -p $(DESTDIR)$(PREFIX)/bin
+	cp iceprog $(DESTDIR)$(PREFIX)/bin/iceprog
 
 uninstall:
-	rm -f $(DESTDIR)/bin/iceprog
+	rm -f $(DESTDIR)$(PREFIX)/bin/iceprog
 
 clean:
 	rm -f iceprog
+	rm -f iceprog.exe
 	rm -f *.o *.d
 
 -include *.d
