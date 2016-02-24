@@ -3,41 +3,53 @@ Description: This makes sure that the CXXFLAGS given by the
  unwanted CXXFLAGS are removed.
 Author: Ruben Undheim <ruben.undheim@gmail.com>
 
-Index: icestorm/icemulti/Makefile
-===================================================================
---- icestorm.orig/icemulti/Makefile	2015-10-08 08:36:26.843035669 +0200
-+++ icestorm/icemulti/Makefile	2015-10-08 08:36:58.549608012 +0200
-@@ -1,7 +1,7 @@
- # CXX = clang
- CXX ?= clang
+--- a/icemulti/Makefile
++++ b/icemulti/Makefile
+@@ -1,6 +1,6 @@
+ include ../config.mk
  LDLIBS = -lm -lstdc++
 -CXXFLAGS = -MD -O0 -ggdb -Wall -std=c++11
 +CXXFLAGS += -Wall -std=c++11
- CC = $(CXX)
- DESTDIR = /usr/local
  
-Index: icestorm/icepack/Makefile
-===================================================================
---- icestorm.orig/icepack/Makefile	2015-10-08 08:36:26.843035669 +0200
-+++ icestorm/icepack/Makefile	2015-10-08 08:36:46.837429230 +0200
-@@ -1,7 +1,7 @@
- # CXX = clang
- CXX ?= clang
+ all: icemulti$(EXE)
+ 
+--- a/icepack/Makefile
++++ b/icepack/Makefile
+@@ -1,6 +1,6 @@
+ include ../config.mk
  LDLIBS = -lm -lstdc++
 -CXXFLAGS = -MD -O0 -ggdb -Wall -std=c++11 -I/usr/local/include
 +CXXFLAGS += -Wall -std=c++11
- CC = $(CXX)
- DESTDIR = /usr/local
+ MXEGCC = /usr/local/src/mxe/usr/bin/i686-pc-mingw32-gcc
  
-Index: icestorm/iceprog/Makefile
-===================================================================
---- icestorm.orig/iceprog/Makefile	2015-10-08 08:36:26.843035669 +0200
-+++ icestorm/iceprog/Makefile	2015-10-08 08:37:21.418286898 +0200
+ all: icepack$(EXE) iceunpack$(EXE)
+--- a/iceprog/Makefile
++++ b/iceprog/Makefile
 @@ -1,6 +1,6 @@
- # CC = clang
+ include ../config.mk
  LDLIBS = -L/usr/local/lib -lftdi -lm
 -CFLAGS = -MD -O0 -ggdb -Wall -std=c99 -I/usr/local/include
 +CFLAGS += -Wall -std=c99
- DESTDIR = /usr/local
  
- all: iceprog
+ ifeq ($(MXE),1)
+ LDLIBS += -lusb
+--- a/icepll/Makefile
++++ b/icepll/Makefile
+@@ -1,6 +1,6 @@
+ include ../config.mk
+ LDLIBS = -lm -lstdc++
+-CXXFLAGS = -MD -O0 -ggdb -Wall -std=c++11 -I/usr/local/include
++CXXFLAGS += -Wall -std=c++11
+ 
+ all: icepll$(EXE)
+ 
+--- a/icetime/Makefile
++++ b/icetime/Makefile
+@@ -1,6 +1,6 @@
+ include ../config.mk
+ LDLIBS = -lm -lstdc++
+-CXXFLAGS = -MD -O0 -ggdb -Wall -std=c++11 -I/usr/local/include -DPREFIX='"$(PREFIX)"'
++CXXFLAGS += -Wall -std=c++11 -DPREFIX='"$(PREFIX)"'
+ 
+ all: icetime$(EXE)
+ 
