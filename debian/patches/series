@@ -2,3 +2,4 @@
 02_spelling_fixes.patch
 03_cxxflags.patch
 override-CXX.patch
+fix_spelling_in_binaries.patch

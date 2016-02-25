@@ -1,6 +1,6 @@
 fpga-icestorm (0~20160218gitf2b2549-1) unstable; urgency=medium
 
-  * Non-maintainer upload
+  [ Sebastian Kuzminsky ]
   * New upstream version
   * debian/man:
     - Added man pages for new commands: icetime and icepll
@@ -9,9 +9,14 @@ fpga-icestorm (0~20160218gitf2b2549-1) unstable; urgency=medium
       which compiler to use.
     - Refreshed patches
   * debian/rules:
-    - Needs to set PREFIX=/usr in override_dh_auto_install
+    - Set PREFIX=/usr in override_dh_auto_install
 
- -- Sebastian Kuzminsky <seb@highlab.com>  Tue, 23 Feb 2016 19:21:14 -0700
+  [ Ruben Undheim ]
+  * debian/control:
+    - Updated Standards version to 3.9.7
+  * Added debian/patches/fix_spelling_in_binaries.patch
+
+ -- Ruben Undheim <ruben.undheim@gmail.com>  Thu, 25 Feb 2016 23:59:47 +0100
 
 fpga-icestorm (0~20151006git103e6fd-3) unstable; urgency=medium
 

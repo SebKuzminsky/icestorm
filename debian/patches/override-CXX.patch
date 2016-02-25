@@ -1,3 +1,7 @@
+Description: This patch makes sure that CXX and CC can be set by the package
+ build system.
+Author: Sebastian Kuzminsky <seb@highlab.com>
+
 --- a/config.mk
 +++ b/config.mk
 @@ -1,5 +1,5 @@

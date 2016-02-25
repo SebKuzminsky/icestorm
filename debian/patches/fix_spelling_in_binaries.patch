@@ -1,0 +1,31 @@
+Description: This patch fixes a few spelling errors detected by lintian
+Author: Ruben Undheim <ruben.undheim@gmail.com>
+
+--- fpga-icestorm-0~20160218gitf2b2549.orig/icepll/icepll.cc
++++ fpga-icestorm-0~20160218gitf2b2549/icepll/icepll.cc
+@@ -84,12 +84,12 @@ int main(int argc, char **argv)
+ 	int best_divq = 0;
+ 
+ 	if (f_pllin < 10 || f_pllin > 133) {
+-		fprintf(stderr, "Error: PLL input freqency %.3f MHz is outside range 10 MHz - 133 MHz!\n", f_pllin);
++		fprintf(stderr, "Error: PLL input frequency %.3f MHz is outside range 10 MHz - 133 MHz!\n", f_pllin);
+ 		exit(1);
+ 	}
+ 
+ 	if (f_pllout < 16 || f_pllout > 275) {
+-		fprintf(stderr, "Error: PLL output freqency %.3f MHz is outside range 16 MHz - 275 MHz!\n", f_pllout);
++		fprintf(stderr, "Error: PLL output frequency %.3f MHz is outside range 16 MHz - 275 MHz!\n", f_pllout);
+ 		exit(1);
+ 	}
+ 
+--- fpga-icestorm-0~20160218gitf2b2549.orig/icetime/icetime.cc
++++ fpga-icestorm-0~20160218gitf2b2549/icetime/icetime.cc
+@@ -1886,7 +1886,7 @@ int main(int argc, char **argv)
+ 
+ 	if (device_type.empty()) {
+ 		device_type = "lp" + config_device;
+-		printf("// Warning: Missing -d paramter. Assuming '%s' device.\n", device_type.c_str());
++		printf("// Warning: Missing -d parameter. Assuming '%s' device.\n", device_type.c_str());
+ 	}
+ 
+ 	if (device_type == "lp1k" || device_type == "hx1k") {
