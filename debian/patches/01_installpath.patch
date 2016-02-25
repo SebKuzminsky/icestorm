@@ -1,121 +1,48 @@
 Author: Ruben Undheim <ruben.undheim@gmail.com>
-Description: This patch makes sure that the files are installed in the correct location
-Index: icestorm-0~20151006git103e6fd/icebox/Makefile
+
+Install the python programs and the iceboxdb module in
+/usr/share/fpga-icestorm/python, instead of in /usr/bin where upstream
+wants to put them.
+
+The rationale for this is that icebox imports iceboxdb, so iceboxdb needs
+to be findable by the python importer, but iceboxdb is not useful for any
+program other than icebox, so it should not be in the normal system-wide
+python include path.
+
+Index: icestorm/icebox/Makefile
 ===================================================================
---- icestorm-0~20151006git103e6fd.orig/icebox/Makefile	2015-10-07 23:20:00.195332107 +0400
-+++ icestorm-0~20151006git103e6fd/icebox/Makefile	2015-10-07 23:22:59.120160675 +0400
-@@ -15,33 +15,34 @@
+--- icestorm.orig/icebox/Makefile
++++ icestorm/icebox/Makefile
+@@ -15,19 +15,19 @@ clean:
  	rm -f icebox.pyc iceboxdb.pyc
  
  install: all
--	mkdir -p $(DESTDIR)/share/icebox
--	mkdir -p $(DESTDIR)/bin
--	cp chipdb-1k.txt     $(DESTDIR)/share/icebox/
--	cp chipdb-8k.txt     $(DESTDIR)/share/icebox/
--	cp icebox.py         $(DESTDIR)/bin/icebox.py
--	cp iceboxdb.py       $(DESTDIR)/bin/iceboxdb.py
--	cp icebox_chipdb.py  $(DESTDIR)/bin/icebox_chipdb
--	cp icebox_diff.py    $(DESTDIR)/bin/icebox_diff
--	cp icebox_explain.py $(DESTDIR)/bin/icebox_explain
--	cp icebox_colbuf.py  $(DESTDIR)/bin/icebox_colbuf
--	cp icebox_html.py    $(DESTDIR)/bin/icebox_html
--	cp icebox_maps.py    $(DESTDIR)/bin/icebox_maps
--	cp icebox_vlog.py    $(DESTDIR)/bin/icebox_vlog
-+	mkdir -p $(DESTDIR)/usr/share/fpga-icestorm/chipdb
-+	mkdir -p $(DESTDIR)/usr/bin
-+	mkdir -p $(DESTDIR)/usr/share/fpga-icestorm/python
-+	cp chipdb-1k.txt     $(DESTDIR)/usr/share/fpga-icestorm/chipdb/
-+	cp chipdb-8k.txt     $(DESTDIR)/usr/share/fpga-icestorm/chipdb/
-+	cp icebox.py         $(DESTDIR)/usr/share/fpga-icestorm/python/icebox.py
-+	cp iceboxdb.py       $(DESTDIR)/usr/share/fpga-icestorm/python/iceboxdb.py
-+	cp icebox_chipdb.py  $(DESTDIR)/usr/share/fpga-icestorm/python/icebox_chipdb
-+	cp icebox_diff.py    $(DESTDIR)/usr/share/fpga-icestorm/python/icebox_diff
-+	cp icebox_explain.py $(DESTDIR)/usr/share/fpga-icestorm/python/icebox_explain
-+	cp icebox_colbuf.py  $(DESTDIR)/usr/share/fpga-icestorm/python/icebox_colbuf
-+	cp icebox_html.py    $(DESTDIR)/usr/share/fpga-icestorm/python/icebox_html
-+	cp icebox_maps.py    $(DESTDIR)/usr/share/fpga-icestorm/python/icebox_maps
-+	cp icebox_vlog.py    $(DESTDIR)/usr/share/fpga-icestorm/python/icebox_vlog
+-	mkdir -p $(DESTDIR)$(PREFIX)/share/icebox
+-	mkdir -p $(DESTDIR)$(PREFIX)/bin
+-	cp chipdb-1k.txt     $(DESTDIR)$(PREFIX)/share/icebox/
+-	cp chipdb-8k.txt     $(DESTDIR)$(PREFIX)/share/icebox/
+-	cp icebox.py         $(DESTDIR)$(PREFIX)/bin/icebox.py
+-	cp iceboxdb.py       $(DESTDIR)$(PREFIX)/bin/iceboxdb.py
+-	cp icebox_chipdb.py  $(DESTDIR)$(PREFIX)/bin/icebox_chipdb
+-	cp icebox_diff.py    $(DESTDIR)$(PREFIX)/bin/icebox_diff
+-	cp icebox_explain.py $(DESTDIR)$(PREFIX)/bin/icebox_explain
+-	cp icebox_colbuf.py  $(DESTDIR)$(PREFIX)/bin/icebox_colbuf
+-	cp icebox_html.py    $(DESTDIR)$(PREFIX)/bin/icebox_html
+-	cp icebox_maps.py    $(DESTDIR)$(PREFIX)/bin/icebox_maps
+-	cp icebox_vlog.py    $(DESTDIR)$(PREFIX)/bin/icebox_vlog
++	mkdir -p $(DESTDIR)$(PREFIX)/share/fpga-icestorm/chipdb
++	mkdir -p $(DESTDIR)$(PREFIX)/share/fpga-icestorm/python
++	cp chipdb-1k.txt     $(DESTDIR)$(PREFIX)/share/fpga-icestorm/chipdb/
++	cp chipdb-8k.txt     $(DESTDIR)$(PREFIX)/share/fpga-icestorm/chipdb/
++	cp icebox.py         $(DESTDIR)$(PREFIX)/share/fpga-icestorm/python/icebox.py
++	cp iceboxdb.py       $(DESTDIR)$(PREFIX)/share/fpga-icestorm/python/iceboxdb.py
++	cp icebox_chipdb.py  $(DESTDIR)$(PREFIX)/share/fpga-icestorm/python/icebox_chipdb
++	cp icebox_diff.py    $(DESTDIR)$(PREFIX)/share/fpga-icestorm/python/icebox_diff
++	cp icebox_explain.py $(DESTDIR)$(PREFIX)/share/fpga-icestorm/python/icebox_explain
++	cp icebox_colbuf.py  $(DESTDIR)$(PREFIX)/share/fpga-icestorm/python/icebox_colbuf
++	cp icebox_html.py    $(DESTDIR)$(PREFIX)/share/fpga-icestorm/python/icebox_html
++	cp icebox_maps.py    $(DESTDIR)$(PREFIX)/share/fpga-icestorm/python/icebox_maps
++	cp icebox_vlog.py    $(DESTDIR)$(PREFIX)/share/fpga-icestorm/python/icebox_vlog
  
  uninstall:
--	rm -f $(DESTDIR)/bin/icebox.py
--	rm -f $(DESTDIR)/bin/iceboxdb.py
--	rm -f $(DESTDIR)/bin/icebox_chipdb
--	rm -f $(DESTDIR)/bin/icebox_diff
--	rm -f $(DESTDIR)/bin/icebox_explain
--	rm -f $(DESTDIR)/bin/icebox_colbuf
--	rm -f $(DESTDIR)/bin/icebox_html
--	rm -f $(DESTDIR)/bin/icebox_maps
--	rm -f $(DESTDIR)/bin/icebox_vlog
--	rm -f $(DESTDIR)/share/icebox/chipdb-1k.txt
--	rm -f $(DESTDIR)/share/icebox/chipdb-8k.txt
--	-rmdir $(DESTDIR)/share/icebox
-+	rm -f $(DESTDIR)/usr/bin/icebox.py
-+	rm -f $(DESTDIR)/usr/bin/iceboxdb.py
-+	rm -f $(DESTDIR)/usr/bin/icebox_chipdb
-+	rm -f $(DESTDIR)/usr/bin/icebox_diff
-+	rm -f $(DESTDIR)/usr/bin/icebox_explain
-+	rm -f $(DESTDIR)/usr/bin/icebox_colbuf
-+	rm -f $(DESTDIR)/usr/bin/icebox_html
-+	rm -f $(DESTDIR)/usr/bin/icebox_maps
-+	rm -f $(DESTDIR)/usr/bin/icebox_vlog
-+	rm -f $(DESTDIR)/usr/share/icestorm/chipdb/chipdb-1k.txt
-+	rm -f $(DESTDIR)/usr/share/icestorm/chipdb/chipdb-8k.txt
-+	-rmdir $(DESTDIR)/usr/share/icestorm/chipdb
- 
- .PHONY: all clean install uninstall
- 
-Index: icestorm-0~20151006git103e6fd/icemulti/Makefile
-===================================================================
---- icestorm-0~20151006git103e6fd.orig/icemulti/Makefile	2015-10-07 23:20:00.195332107 +0400
-+++ icestorm-0~20151006git103e6fd/icemulti/Makefile	2015-10-07 23:20:02.000000000 +0400
-@@ -10,10 +10,10 @@
- icemulti: icemulti.o
- 
- install: all
--	cp icemulti $(DESTDIR)/bin/icemulti
-+	cp icemulti $(DESTDIR)/usr/bin/icemulti
- 
- uninstall:
--	rm -f $(DESTDIR)/bin/icemulti
-+	rm -f $(DESTDIR)/usr/bin/icemulti
- 
- clean:
- 	rm -f icemulti
-Index: icestorm-0~20151006git103e6fd/icepack/Makefile
-===================================================================
---- icestorm-0~20151006git103e6fd.orig/icepack/Makefile	2015-10-07 23:20:00.195332107 +0400
-+++ icestorm-0~20151006git103e6fd/icepack/Makefile	2015-10-07 23:20:02.000000000 +0400
-@@ -13,12 +13,12 @@
- 	ln -sf icepack iceunpack
- 
- install: all
--	cp icepack $(DESTDIR)/bin/icepack
--	ln -sf icepack $(DESTDIR)/bin/iceunpack
-+	cp icepack $(DESTDIR)/usr/bin/icepack
-+	ln -sf icepack $(DESTDIR)/usr/bin/iceunpack
- 
- uninstall:
--	rm -f $(DESTDIR)/bin/icepack
--	rm -f $(DESTDIR)/bin/iceunpack
-+	rm -f $(DESTDIR)/usr/bin/icepack
-+	rm -f $(DESTDIR)/usr/bin/iceunpack
- 
- clean:
- 	rm -f icepack
-Index: icestorm-0~20151006git103e6fd/iceprog/Makefile
-===================================================================
---- icestorm-0~20151006git103e6fd.orig/iceprog/Makefile	2015-10-07 23:20:00.195332107 +0400
-+++ icestorm-0~20151006git103e6fd/iceprog/Makefile	2015-10-07 23:20:02.000000000 +0400
-@@ -8,10 +8,10 @@
- iceprog: iceprog.o
- 
- install: all
--	cp iceprog $(DESTDIR)/bin/iceprog
-+	cp iceprog $(DESTDIR)/usr/bin/iceprog
- 
- uninstall:
--	rm -f $(DESTDIR)/bin/iceprog
-+	rm -f $(DESTDIR)/usr/bin/iceprog
- 
- clean:
- 	rm -f iceprog
+ 	rm -f $(DESTDIR)$(PREFIX)/bin/icebox.py
