@@ -12,4 +12,6 @@ txt2man -d "${CHANGELOG_DATE}" -t ICEBOX_EXPLAIN         -s 1 icebox_explain.txt
 txt2man -d "${CHANGELOG_DATE}" -t ICEBOX_HTML            -s 1 icebox_html.txt         > icebox_html.1
 txt2man -d "${CHANGELOG_DATE}" -t ICEUNPACK              -s 1 iceunpack.txt           > iceunpack.1
 txt2man -d "${CHANGELOG_DATE}" -t ICEBOX_CHIPDB          -s 1 icebox_chipdb.txt       > icebox_chipdb.1
+txt2man -d "${CHANGELOG_DATE}" -t ICEPLL                 -s 1 icepll.txt              > icepll.1
+txt2man -d "${CHANGELOG_DATE}" -t ICETIME                -s 1 icetime.txt             > icetime.1
 
