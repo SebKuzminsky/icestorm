@@ -1,6 +1,15 @@
-fpga-icestorm (0~20160218gitf2b25497-1~0) UNRELEASED; urgency=medium
+fpga-icestorm (0~20160218gitf2b2549-1) unstable; urgency=medium
 
-  * New upstream version.
+  * Non-maintainer upload
+  * New upstream version
+  * debian/man:
+    - Added man pages for new commands: icetime and icepll
+  * debian/patches:
+    - Added patch override-CXX.patch so that the Debian build system decides
+      which compiler to use.
+    - Refreshed patches
+  * debian/rules:
+    - Needs to set PREFIX=/usr in override_dh_auto_install
 
  -- Sebastian Kuzminsky <seb@highlab.com>  Tue, 23 Feb 2016 19:21:14 -0700
 
